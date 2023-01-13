@@ -5,18 +5,18 @@ import { render, screen } from '@testing-library/react'
 
 import Input from './Input'
 
-describe('Running Test for Marbella Input', () => {
+describe('Running Test for sawatzky Input', () => {
   test('Check placeholder in Input', () => {
-    render(<Input placeholder='Hello marbella' />)
-    expect(screen.getByPlaceholderText('Hello marbella')).toHaveAttribute(
+    render(<Input placeholder='sawatzky' />)
+    expect(screen.getByPlaceholderText('sawatzky')).toHaveAttribute(
       'placeholder',
-      'Hello marbella'
+      'sawatzky'
     )
   })
 
   test('renders the Input component', () => {
-    render(<Input placeholder='marbella' />)
-    const input = screen.getByPlaceholderText('marbella') as HTMLInputElement
+    render(<Input placeholder='sawatzky' />)
+    const input = screen.getByPlaceholderText('sawatzky') as HTMLInputElement
     userEvent.type(input, 'Hello world!')
     expect(input.value).toBe('Hello world!')
   })

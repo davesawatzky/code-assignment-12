@@ -1,21 +1,22 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
-import Input from './Input'
-import { InputProps } from './Input.types'
+import Dropdown from './Dropdown'
+import { DropdownProps } from './Dropdown.types'
 
 export default {
-  title: 'Sawatzky/Input',
-  component: Input,
+  title: 'Sawatzky/Dropdown',
+  component: Dropdown,
   argTypes: {},
-} as Meta<typeof Input>
+} as Meta<typeof Dropdown>
 
-const Template: Story<InputProps> = (args) => <Input {...args} />
+const Template: Story<DropdownProps> = (args) => <Dropdown {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
   error: false,
   disabled: false,
   label: 'Primary',
+  options: ['Up', 'Down'],
 }
 
 export const Success = Template.bind({})
@@ -24,6 +25,7 @@ Success.args = {
   success: true,
   disabled: false,
   label: 'Success',
+  options: ['Up', 'Down'],
 }
 
 export const Error = Template.bind({})
@@ -31,10 +33,12 @@ Error.args = {
   error: true,
   disabled: false,
   message: 'Error',
+  options: ['Up', 'Down'],
 }
 
 export const Disabled = Template.bind({})
 Disabled.args = {
   disabled: true,
   label: 'Disabled',
+  options: ['Up', 'Down'],
 }
