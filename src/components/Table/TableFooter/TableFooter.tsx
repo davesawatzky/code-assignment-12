@@ -2,13 +2,15 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 import { TableFooterProps } from './TableFooter.types'
 
-const StyledTableFooter = styled.thead<TableFooterProps>``
+const StyledTableFooter = styled.tfoot<TableFooterProps>`
+  background-color: green;
+`
 
 const StyledTableFooterRow = styled.tr<TableFooterProps>``
 
 const StyledTableFooterCell = styled.th<TableFooterProps>``
 
-const TableHeader: FC<TableFooterProps> = ({ footer }) => {
+const TableFooter: FC<TableFooterProps> = ({ footer }) => {
   return (
     <StyledTableFooter>
       <StyledTableFooterRow>
@@ -22,4 +24,4 @@ const TableHeader: FC<TableFooterProps> = ({ footer }) => {
   )
 }
 
-export default TableHeader
+export default TableFooter
