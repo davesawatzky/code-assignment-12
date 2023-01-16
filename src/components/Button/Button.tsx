@@ -1,16 +1,14 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-
 import { ButtonProps } from './Button.types'
 
 const StyledButton = styled.button<ButtonProps>`
   border: 0;
   line-height: 1;
-  font-size: 15px;
+  font-size: 1rem;
   cursor: pointer;
   font-weight: 700;
-  font-weight: bold;
-  border-radius: 3px;
+  border-radius: 10px;
   display: inline-block;
   padding: ${(props) =>
     props.size === 'small'
@@ -18,11 +16,11 @@ const StyledButton = styled.button<ButtonProps>`
       : props.size === 'medium'
       ? '9px 30px 11px'
       : '14px 30px 16px'};
-  color: ${(props) => (props.primary ? '#1b116e' : '#ffffff')};
-  background-color: ${(props) => (props.primary ? '#6bedb5' : '#1b116e')};
+  color: ${(props) => (props.primary ? '#ffffff' : '#ffffff')};
+  background-color: ${(props) => (props.primary ? '#023fc4' : '#5f5f5f')};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
   &:hover {
-    background-color: ${(props) => (props.primary ? '#55bd90' : '#6bedb5')};
+    background-color: ${(props) => (props.primary ? '#4982fc' : '#969696')};
   }
   &:active {
     border: solid 2px #1b116e;

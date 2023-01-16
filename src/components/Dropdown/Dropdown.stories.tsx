@@ -6,7 +6,14 @@ import { DropdownProps } from './Dropdown.types'
 export default {
   title: 'Sawatzky/Dropdown',
   component: Dropdown,
-  argTypes: {},
+  argTypes: {
+    label: {
+      defaultValue: 'Primary',
+    },
+    options: {
+      defaultValue: ['Up', 'Down'],
+    },
+  },
 } as Meta<typeof Dropdown>
 
 const Template: Story<DropdownProps> = (args) => <Dropdown {...args} />

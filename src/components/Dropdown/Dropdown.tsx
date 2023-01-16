@@ -3,33 +3,35 @@ import styled from 'styled-components'
 import { DropdownProps } from './Dropdown.types'
 
 const StyledDropdown = styled.select<DropdownProps>`
-  height: 40px;
+  height: 2.5rem;
+  font-size: 1rem;
   width: 300px;
-  border-radius: 3px;
-  border: solid 2px
+  padding: 0px 10px;
+  border-radius: 15px;
+  border: solid 1px
     ${(props) =>
       props.disabled
         ? '#e4e3ea'
         : props.error
-        ? '#a9150b'
+        ? '#d30e00'
         : props.success
-        ? '#067d68'
-        : '#353637'};
+        ? '#06af00'
+        : '#999999'};
   background-color: #fff;
   &:focus {
-    border: solid 2px #1b116e;
+    border: solid 2px #023fc4;
   }
 `
 
 const StyledLabel = styled.div<DropdownProps>`
-  font-size: 14px;
+  font-size: 1rem;
   color: ${(props) => (props.disabled ? '#e4e3ea' : '#080808')};
   padding-bottom: 6px;
 `
 
 const StyledMessage = styled.div<DropdownProps>`
-  font-size: 14px;
-  color: #a9150b8;
+  font-size: 1rem;
+  color: #a9150b;
   padding-top: 4px;
 `
 
@@ -45,6 +47,7 @@ const Dropdown: FC<DropdownProps> = ({
   id,
   label,
   error,
+  name,
   message,
   disabled,
   success,
@@ -62,6 +65,7 @@ const Dropdown: FC<DropdownProps> = ({
       </StyledLabel>
       <StyledDropdown
         id={id}
+        name={name}
         error={error}
         onChange={onChange}
         disabled={disabled}
