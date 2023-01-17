@@ -4,8 +4,8 @@ import { TableCellProps } from './TableCell.types'
 
 const StyledTableCell = styled.td<TableCellProps>``
 
-const TableCell: FC<TableCellProps> = ({ cellData }) => {
-  return <StyledTableCell>{cellData}</StyledTableCell>
+const TableCell: FC<TableCellProps> = ({ children, ...props }) => {
+  return <StyledTableCell {...props}>{children}</StyledTableCell>
 }
 
 export default TableCell

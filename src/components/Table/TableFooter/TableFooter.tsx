@@ -10,9 +10,9 @@ const StyledTableFooterRow = styled.tr<TableFooterProps>``
 
 const StyledTableFooterCell = styled.th<TableFooterProps>``
 
-const TableFooter: FC<TableFooterProps> = ({ footer }) => {
+const TableFooter: FC<TableFooterProps> = ({ footer, ...props }) => {
   return (
-    <StyledTableFooter>
+    <StyledTableFooter {...props}>
       <StyledTableFooterRow>
         {footer?.map((foot) => (
           <StyledTableFooterCell key={foot.name} colSpan={foot.columnSpan}>

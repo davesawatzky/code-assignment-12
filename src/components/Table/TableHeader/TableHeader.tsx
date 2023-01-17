@@ -13,9 +13,9 @@ const StyledTableHeaderRow = styled.tr<TableHeaderProps>`
 
 const StyledTableHeaderCell = styled.th<TableHeaderProps>``
 
-const TableHeader: FC<TableHeaderProps> = ({ headings }) => {
+const TableHeader: FC<TableHeaderProps> = ({ headings, ...props }) => {
   return (
-    <StyledTableHeader>
+    <StyledTableHeader {...props}>
       <StyledTableHeaderRow>
         {headings?.map((heading) => (
           <StyledTableHeaderCell

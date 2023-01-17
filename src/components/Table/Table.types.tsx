@@ -1,3 +1,5 @@
+import { ReactNode } from 'react'
+
 export interface TableProps {
   tableData?: (string | number)[][]
   tableHeaderData?: {
@@ -10,4 +12,5 @@ export interface TableProps {
   }[]
   error: boolean
   disabled: boolean
+  children: ReactNode
 }

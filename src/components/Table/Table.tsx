@@ -13,24 +13,33 @@ const StyledTable = styled.table<TableProps>`
 const StyledTableBody = styled.tbody<TableProps>`
   border: 1px solid black;
 `
+const TableBody: FC<TableProps> = ({ error, disabled, children }) => {
+  return (
+    <StyledTableBody error={error} disabled={disabled}>
+      {children}
+    </StyledTableBody>
+  )
+}
 
 const Table: FC<TableProps> = ({
   tableHeaderData,
   tableFooterData,
   tableData,
+  error,
+  disabled,
 }) => {
   return (
-    <StyledTable>
+    <StyledTable error={error} disabled={disabled}>
       <TableHeader headings={tableHeaderData}></TableHeader>
-      <StyledTableBody>
+      <TableBody error={error} disabled={disabled}>
         {tableData?.map((rowData, i) => (
-          <TableRow key={i} rowData={rowData}>
-            {rowData?.map((cellData, j) => (
-              <TableCell key={j} cellData={cellData}></TableCell>
+          <TableRow key={i}>
+            {rowData.map((cellData, j) => (
+              <TableCell key={j}>{cellData}</TableCell>
             ))}
           </TableRow>
         ))}
-      </StyledTableBody>
+      </TableBody>
       <TableFooter footer={tableFooterData}></TableFooter>
     </StyledTable>
   )

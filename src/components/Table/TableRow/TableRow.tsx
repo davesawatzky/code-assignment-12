@@ -6,8 +6,8 @@ const StyledTableRow = styled.tr<TableRowProps>`
   background-color: red;
 `
 
-const TableRow: FC<TableRowProps> = ({ rowData }) => {
-  return <StyledTableRow>{rowData}</StyledTableRow>
+const TableRow: FC<TableRowProps> = ({ children, ...props }) => {
+  return <StyledTableRow {...props}>{children}</StyledTableRow>
 }
 
 export default TableRow

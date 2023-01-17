@@ -1,3 +1,5 @@
+import { ReactNode } from 'react'
+
 export interface TableCellProps {
-  cellData?: string | number
+  children: ReactNode
 }
