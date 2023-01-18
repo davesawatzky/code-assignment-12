@@ -1,4 +1,4 @@
-import { MouseEventHandler } from 'react'
+import { MouseEventHandler, ReactNode } from 'react'
 
 export interface HeroProps {
   id?: string
@@ -9,9 +9,16 @@ export interface HeroProps {
   headingText?: string
   subText?: string
   buttonText?: string
-  heroWidth?: string
-  heroHeight?: string
-  imageWidth?: string
-  imageHeight?: string
+  heroHeight?: (number & 'em') | (number & 'px') | (number & '%') | 'vh'
+  imageSize?:
+    | 'cover'
+    | 'auto'
+    | 'contain'
+    | (number & 'em')
+    | (number & 'px')
+    | (number & '%')
+  imagePosition?: 'left' | 'center' | 'right'
+  textBlockPosition?: 'left' | 'right'
   onClick?: MouseEventHandler<HTMLButtonElement>
+  children?: ReactNode
 }

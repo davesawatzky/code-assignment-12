@@ -22,13 +22,6 @@ export default {
     buttonText: {
       defaultValue: 'Click Here',
     },
-    image: {
-      defaultValue:
-        'https://diatonic.io/wp-content/uploads/2021/10/20170401_160410.jpg',
-    },
-    imageWidth: {
-      defaultValue: '100%',
-    },
   },
 } as Meta<typeof Hero>
 
@@ -38,8 +31,13 @@ export const Primary = Template.bind({})
 Primary.args = {
   error: false,
   disabled: false,
-  imageWidth: '50%',
-  imageHeight: '200px',
+  image: 'https://diatonic.io/wp-content/uploads/2021/10/20170401_160410.jpg',
+  imageSize: 'cover',
+  imagePosition: 'right',
+  heroHeight: '300px',
+  textBlockPosition: 'left',
+  headingText: 'Hero Title',
+  subText: 'Hero Subtitle',
 }
 
 export const Error = Template.bind({})
