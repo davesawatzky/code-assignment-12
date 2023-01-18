@@ -15,21 +15,21 @@ export const Primary = Template.bind({})
 Primary.args = {
   primary: true,
   disabled: false,
-  text: 'Primary',
+  buttonText: 'Primary',
 }
 
 export const Secondary = Template.bind({})
 Secondary.args = {
   primary: false,
   disabled: false,
-  text: 'Secondary',
+  buttonText: 'Secondary',
 }
 
 export const Disabled = Template.bind({})
 Disabled.args = {
   primary: false,
   disabled: true,
-  text: 'Disabled',
+  buttonText: 'Disabled',
 }
 
 export const Small = Template.bind({})
@@ -37,7 +37,7 @@ Small.args = {
   primary: true,
   disabled: false,
   size: 'small',
-  text: 'Small',
+  buttonText: 'Small',
 }
 
 export const Medium = Template.bind({})
@@ -45,7 +45,7 @@ Medium.args = {
   primary: true,
   disabled: false,
   size: 'medium',
-  text: 'Medium',
+  buttonText: 'Medium',
 }
 
 export const Large = Template.bind({})
@@ -53,5 +53,5 @@ Large.args = {
   primary: true,
   disabled: false,
   size: 'large',
-  text: 'Large',
+  buttonText: 'Large',
 }

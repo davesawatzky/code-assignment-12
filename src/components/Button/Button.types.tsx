@@ -1,7 +1,8 @@
-import { MouseEventHandler } from 'react'
+import { MouseEventHandler, ReactNode } from 'react'
 
 export interface ButtonProps {
-  text?: string
+  buttonText?: string
+  children?: string
   primary?: boolean
   disabled?: boolean
   size?: 'small' | 'medium' | 'large'

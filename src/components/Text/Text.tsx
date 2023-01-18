@@ -8,10 +8,17 @@ const StyledText = styled.p<TextProps>`
   font-weight: ${(props) => (props.error ? '700' : '400')};
 `
 
-const Text: FC<TextProps> = ({ text, id, error, disabled, ...props }) => {
+const Text: FC<TextProps> = ({
+  text,
+  children,
+  id,
+  error,
+  disabled,
+  ...props
+}) => {
   return (
     <StyledText id={id} disabled={disabled} error={error} {...props}>
-      {text}
+      {text ? text : children}
     </StyledText>
   )
 }

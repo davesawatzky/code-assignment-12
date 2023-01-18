@@ -37,7 +37,8 @@ const Button: FC<ButtonProps> = ({
   size,
   primary,
   disabled,
-  text,
+  children,
+  buttonText,
   onClick,
   ...props
 }) => {
@@ -50,7 +51,7 @@ const Button: FC<ButtonProps> = ({
       size={size}
       {...props}
     >
-      {text}
+      {buttonText ? buttonText : children}
     </StyledButton>
   )
 }
