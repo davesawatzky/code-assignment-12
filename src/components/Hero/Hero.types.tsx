@@ -4,6 +4,7 @@ export interface HeroProps {
   id?: string
   error?: boolean
   disabled?: boolean
+  primary?: boolean
   image?: string
   video?: string
   headingText?: string

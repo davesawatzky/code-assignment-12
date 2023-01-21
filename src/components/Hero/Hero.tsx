@@ -49,6 +49,7 @@ const Hero: FC<HeroProps> = ({
   subText,
   heroHeight,
   buttonText,
+  primary,
   error,
   disabled,
   onClick,
@@ -70,7 +71,7 @@ const Hero: FC<HeroProps> = ({
         <StyledH2 error={error} disabled={disabled}>
           {subText}
         </StyledH2>
-        <Button onClick={onClick} disabled={disabled}>
+        <Button onClick={onClick} primary={primary} disabled={disabled}>
           {buttonText}
         </Button>
       </StyledTextBlock>

@@ -7,6 +7,7 @@ const StyledDropdown = styled.select<DropdownProps>`
   font-size: 1rem;
   width: 300px;
   padding: 0px 10px;
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : '')};
   border-radius: 15px;
   border: solid 1px
     ${(props) =>
@@ -17,8 +18,8 @@ const StyledDropdown = styled.select<DropdownProps>`
         : props.success
         ? '#06af00'
         : '#999999'};
-  background-color: #fff;
-  &:focus {
+  background-color: ${(props) => (props.disabled ? '#e4e4e4' : '#fff')};
+  :focus {
     border: solid 2px #023fc4;
   }
 `
@@ -74,7 +75,7 @@ const Dropdown: FC<DropdownProps> = ({
         {...props}
       >
         {options?.map((opt) => (
-          <StyledOptions key={opt} value={opt}>
+          <StyledOptions key={opt} value={opt} role={'option'}>
             {opt}
           </StyledOptions>
         ))}

@@ -5,6 +5,7 @@ import { ImageProps } from './Image.types'
 const StyledImage = styled.img<ImageProps>`
   color: ${(props) =>
     props.disabled ? '#e4e3ea' : props.error ? '#a9150b' : '#080808'};
+  filter: ${(props) => (props.disabled ? 'grayscale(100%)' : '')};
 `
 
 const Image: FC<ImageProps> = ({

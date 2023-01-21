@@ -1,12 +1,13 @@
 import { ChangeEventHandler } from 'react';
-export interface InputProps {
+export interface DropdownProps {
     id?: string;
-    name?: string;
     label?: string;
+    name?: string;
     error?: boolean;
     message?: string;
     success?: boolean;
     disabled?: boolean;
     placeholder?: string;
-    onChange?: ChangeEventHandler<HTMLInputElement>;
+    onChange?: ChangeEventHandler<HTMLSelectElement>;
+    options?: string[];
 }

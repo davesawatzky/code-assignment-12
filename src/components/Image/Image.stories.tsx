@@ -8,8 +8,7 @@ export default {
   component: Image,
   argTypes: {
     source: {
-      defaultValue:
-        'https://diatonic.io/wp-content/uploads/2021/10/20170401_160410.jpg',
+      defaultValue: '../../assets/field.jpg',
     },
     width: {
       defaultValue: '100%',
