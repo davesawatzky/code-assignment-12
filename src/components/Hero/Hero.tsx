@@ -14,6 +14,7 @@ const StyledHero = styled.div<HeroProps>`
   align-content: center;
   color: ${(props) =>
     props.disabled ? '#e4e3ea' : props.error ? '#a9150b' : '#080808'};
+  /* background-image: url('src/assets/field.jpg'); */
   background-image: url(${(props) => (props.image ? props.image : blankImage)});
   background-color: ${(props) => (props.disabled ? '#e4e4e475' : '')};
   background-size: ${(props) => props.imageSize};

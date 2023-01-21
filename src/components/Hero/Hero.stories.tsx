@@ -15,7 +15,7 @@ export const Primary = Template.bind({})
 Primary.args = {
   error: false,
   disabled: false,
-  image: '../../assets/field.jpg',
+  image: 'src/assets/field.jpg',
   imageSize: 'contain',
   imagePosition: 'right',
   heroHeight: '300px',
@@ -30,7 +30,7 @@ export const Error = Template.bind({})
 Error.args = {
   error: true,
   disabled: false,
-  image: '../../assets/field.jpg',
+  image: 'src/assets/field.jpg',
   imageSize: 'cover',
   imagePosition: 'right',
   heroHeight: '300px',
@@ -44,7 +44,7 @@ export const Disabled = Template.bind({})
 Disabled.args = {
   error: false,
   disabled: true,
-  image: '../../assets/field.jpg',
+  image: 'src/assets/field.jpg',
   imageSize: 'cover',
   imagePosition: 'right',
   heroHeight: '300px',

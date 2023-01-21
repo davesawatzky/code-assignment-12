@@ -94,10 +94,9 @@ export default {
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   moduleNameMapper: {
     '^react-native$': 'react-native-web',
-    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
-    // '\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-    //   '<rootDir>/mocks/fileMock.js',
-    // '\\.(css|less)$': '<rootDir>/mocks/fileMock.js',
+    '^.+\\.module\\.(css|sass|scss|less)$': 'identity-obj-proxy',
+    '\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/mocks/fileMock.js',
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
@@ -183,9 +182,6 @@ export default {
   // A map from regular expressions to paths to transformers
   transform: {
     '^.+\\.(ts|js|tsx|jsx)$': '@swc/jest',
-    // '^.+\\.css$': '<rootDir>/config/jest/cssTransform.cjs',
-    // '^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)':
-    //   '<rootDir>/config/jest/fileTransform.cjs',
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation

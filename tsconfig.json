@@ -26,6 +26,6 @@
     "src/**/*.test.tsx",
     "src/**/*.stories.tsx"
   ],
-  "include": ["src"],
+  "include": ["src", "mocks"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

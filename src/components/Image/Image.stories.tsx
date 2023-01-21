@@ -17,7 +17,7 @@ Primary.args = {
   disabled: false,
   width: '300px',
   height: '',
-  source: '@assets/field.jpg',
+  source: 'src/assets/field.jpg',
 }
 
 export const Error = Template.bind({})
@@ -26,6 +26,7 @@ Error.args = {
   disabled: false,
   width: '100%',
   height: '',
+  source: 'src/assets/field.jpg',
 }
 export const Disabled = Template.bind({})
 Disabled.args = {
@@ -33,4 +34,5 @@ Disabled.args = {
   disabled: true,
   width: '100%',
   height: '',
+  source: 'src/assets/field.jpg',
 }

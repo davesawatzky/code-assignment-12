@@ -15,16 +15,34 @@ export const Primary = Template.bind({})
 Primary.args = {
   error: false,
   disabled: false,
+  children: (
+    <>
+      <td>Cell 1</td>
+      <td>Cell 2</td>
+    </>
+  ),
 }
 
 export const Error = Template.bind({})
 Error.args = {
   error: true,
   disabled: false,
+  children: (
+    <>
+      <td>Cell 1</td>
+      <td>Cell 2</td>
+    </>
+  ),
 }
 
 export const Disabled = Template.bind({})
 Disabled.args = {
   error: false,
   disabled: true,
+  children: (
+    <>
+      <td>Cell 1</td>
+      <td>Cell 2</td>
+    </>
+  ),
 }

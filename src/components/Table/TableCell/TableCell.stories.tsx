@@ -15,16 +15,19 @@ export const Primary = Template.bind({})
 Primary.args = {
   error: false,
   disabled: false,
+  children: 'Sample Cell',
 }
 
 export const Error = Template.bind({})
 Error.args = {
   error: true,
   disabled: false,
+  children: 'Sample Cell',
 }
 
 export const Disabled = Template.bind({})
 Disabled.args = {
   error: false,
   disabled: true,
+  children: 'Sample Cell',
 }

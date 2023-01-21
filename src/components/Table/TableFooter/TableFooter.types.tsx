@@ -3,4 +3,7 @@ export interface TableFooterProps {
     name: string
     columnSpan: number
   }[]
+  disabled?: boolean
+  error?: boolean
+  footerColor?: string
 }
