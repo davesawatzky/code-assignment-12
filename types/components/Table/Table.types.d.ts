@@ -9,7 +9,10 @@ export interface TableProps {
         name: string;
         columnSpan: number;
     }[];
-    error: boolean;
-    disabled: boolean;
-    children: ReactNode;
+    footerColor?: string;
+    headerColor?: string;
+    tableColor?: string;
+    error?: boolean;
+    disabled?: boolean;
+    children?: ReactNode;
 }
