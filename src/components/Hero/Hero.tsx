@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 import { HeroProps } from './Hero.types'
 import Button from '../Button'
-import placeholderImage from '../../assets/placeholder.jpg'
+import blankImage from '../../assets/placeholder.jpg'
 
 const StyledHero = styled.div<HeroProps>`
   display: grid;
@@ -10,12 +10,12 @@ const StyledHero = styled.div<HeroProps>`
   grid-template-columns: 1fr 1fr;
   border: 1px solid #c1c1c1;
   padding: 30px;
-  margin: 20px;
   justify-items: center;
   align-content: center;
   color: ${(props) =>
     props.disabled ? '#e4e3ea' : props.error ? '#a9150b' : '#080808'};
-  background: url(${(props) => (props.image ? props.image : placeholderImage)});
+  background-image: url(${(props) => (props.image ? props.image : blankImage)});
+  background-color: ${(props) => (props.disabled ? '#e4e4e475' : '')};
   background-size: ${(props) => props.imageSize};
   background-repeat: no-repeat;
   background-position: ${(props) => props.imagePosition};
@@ -53,6 +53,7 @@ const Hero: FC<HeroProps> = ({
   error,
   disabled,
   onClick,
+  ...props
 }) => {
   return (
     <StyledHero
@@ -63,6 +64,7 @@ const Hero: FC<HeroProps> = ({
       id={id}
       disabled={disabled}
       error={error}
+      {...props}
     >
       <StyledTextBlock textBlockPosition={textBlockPosition}>
         <StyledH1 error={error} disabled={disabled}>

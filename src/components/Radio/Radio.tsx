@@ -16,13 +16,13 @@ const StyledLegend = styled.legend<RadioProps>`
   color: ${(props) =>
     props.disabled ? '#a5a5a5' : props.error ? '#a9150b' : '#080808'};
 `
-const StyledOption = styled.label<RadioProps>`
+const StyledLabel = styled.label<RadioProps>`
   font-size: 1rem;
   color: ${(props) =>
     props.disabled ? '#a5a5a5' : props.error ? '#a9150b' : '#080808'};
   padding: 5px;
 `
-const StyledRadio = styled.input<RadioProps>`
+const StyledOption = styled.input<RadioProps>`
   appearance: none;
   outline: none;
   border-radius: 50%;
@@ -72,17 +72,18 @@ const Radio: FC<RadioProps> = ({
         </StyledLegend>
         {options?.map((opt) => (
           <div key={opt}>
-            <StyledRadio
+            <StyledOption
               id={opt}
               type='radio'
               value={opt}
               name={radioGroupName}
               error={error}
               disabled={disabled}
-            ></StyledRadio>
-            <StyledOption htmlFor={opt} error={error} disabled={disabled}>
+              {...props}
+            ></StyledOption>
+            <StyledLabel htmlFor={opt} error={error} disabled={disabled}>
               {opt}
-            </StyledOption>
+            </StyledLabel>
           </div>
         ))}
       </StyledFieldSet>

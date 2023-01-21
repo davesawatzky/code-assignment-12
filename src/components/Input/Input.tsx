@@ -6,7 +6,7 @@ const StyledInput = styled.input<InputProps>`
   height: 40px;
   width: 300px;
   border-radius: 3px;
-  border: solid 2px
+  border: 1px solid
     ${(props) =>
       props.disabled
         ? '#e4e3ea'

@@ -1,23 +1,27 @@
 import React from 'react'
 import '@testing-library/jest-dom'
-import userEvent from '@testing-library/user-event'
 import { render, screen } from '@testing-library/react'
 
 import Input from './Input'
 
-describe('Running Test for sawatzky Input', () => {
-  test('Check placeholder in Input', () => {
-    render(<Input placeholder='sawatzky' />)
-    expect(screen.getByPlaceholderText('sawatzky')).toHaveAttribute(
-      'placeholder',
-      'sawatzky'
+describe('Running Test for Input', () => {
+  test('Check that Input is visible', () => {
+    render(<Input data-testid='inputbox' />)
+    expect(screen.getByTestId('inputbox')).toBeVisible()
+  })
+
+  test('Check that Input component can be disabled', () => {
+    render(<Input data-testid='inputbox' disabled />)
+    expect(screen.getByTestId('inputbox')).toBeDisabled()
+    expect(screen.getByTestId('inputbox')).toHaveStyle(
+      'border: 1px solid #e4e3ea'
     )
   })
 
-  test('renders the Input component', () => {
-    render(<Input placeholder='sawatzky' />)
-    const input = screen.getByPlaceholderText('sawatzky') as HTMLInputElement
-    userEvent.type(input, 'Hello world!')
-    expect(input.value).toBe('Hello world!')
+  test('Check for Error in Input component', () => {
+    render(<Input data-testid='inputbox' error />)
+    expect(screen.getByTestId('inputbox')).toHaveStyle(
+      'border: 1px solid #a9150b'
+    )
   })
 })
