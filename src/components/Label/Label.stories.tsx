@@ -15,15 +15,18 @@ export const Primary = Template.bind({})
 Primary.args = {
   error: false,
   disabled: false,
+  text: 'Primary Label',
 }
 
 export const Error = Template.bind({})
 Error.args = {
   error: true,
   disabled: false,
+  text: 'Error Label',
 }
 export const Disabled = Template.bind({})
 Disabled.args = {
   error: false,
   disabled: true,
+  text: 'Disabled Label',
 }

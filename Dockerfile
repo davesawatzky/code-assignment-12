@@ -2,6 +2,6 @@
 FROM node:18-alpine
 WORKDIR /app
 COPY . .
-RUN npm install --production
-CMD ["node", "src/index.js"]
+RUN npm install
+CMD ["npm run storybook"]
 EXPOSE 3000
