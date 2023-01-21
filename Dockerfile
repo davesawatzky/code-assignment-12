@@ -4,4 +4,4 @@ WORKDIR /app
 COPY . .
 RUN npm install
 CMD ["npm run storybook"]
-EXPOSE 3000
+EXPOSE 6006
