@@ -1,5 +1,5 @@
-#coding-assignment-12
-#David Sawatzky
+# Coding Assignment 12
+# David Sawatzky
 
 Build the docker image with:
 docker build -t sawatzky_david_coding_assignment12:react-lib
