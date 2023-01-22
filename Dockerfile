@@ -3,6 +3,8 @@ FROM node:18-alpine
 
 ENV PATH /app/node_modules/.bin:$PATH
 
+ENV NODE_OPTIONS="--openssl-legacy-provider"
+
 WORKDIR /app
 
 COPY package.json ./
